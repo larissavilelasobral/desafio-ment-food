@@ -14,12 +14,20 @@
 
     Console.WriteLine("O que gostaria de pedir? ");
     Menu();
-    string itens = Console.ReadLine() ?? string.Empty;
-    Console.WriteLine("------------");
+
+    string[] itens = new string[3];
+    itens[0] = Console.ReadLine() ?? string.Empty;
+    itens[1] = Console.ReadLine() ?? string.Empty;
+    itens[2] = Console.ReadLine() ?? string.Empty;
+
+    // Console.WriteLine("------------");
     
+    // Pedido novoPedido = new Pedido(nome, endereco, itens);
+    // string nomePedido = novoPedido.Cardapio(itens);
+    // novoPedido.ResumoPedio(nomePedido);
+
     Pedido novoPedido = new Pedido(nome, endereco, itens);
-    string nomePedido = novoPedido.Cardapio(itens);
-    novoPedido.ResumoPedio(nomePedido);
+    novoPedido.ResumoPedio();
   }
 
   static void Menu()
@@ -28,6 +36,7 @@
   }
 }
 
+//---
 // cliemte passa as informações para a entrega;
 // mostrar menu numerado de pedidos;
 // o cliente escolhe um numero

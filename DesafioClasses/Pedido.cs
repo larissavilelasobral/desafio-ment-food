@@ -3,9 +3,9 @@ class Pedido // nome da classe
   private double valor;
   private string cliente;
   private string endereco;
-  private string itens; // (máximo de 3).
+  private string[] itens; // (máximo de 3).
 
-  public Pedido(string cliente, string endereco, string itens)
+  public Pedido(string cliente, string endereco, string[] itens)
   {
     this.cliente = cliente;
     this.endereco = endereco;
@@ -46,4 +46,12 @@ class Pedido // nome da classe
     Console.WriteLine("Resumo do Pedido: \n Cliente: {0} \n Endereço: {1} \n Itens: {2} \n Total: R$ {3}", this.cliente, this.endereco, nomePedido, this.valor);
     Console.WriteLine("------------");
   }
+
+  public void ResumoPedio()
+  {
+    Console.WriteLine("------------");
+    Console.WriteLine("Resumo do Pedido: \n Cliente: {0} \n Endereço: {1} \n Itens: {2} \n Total: R$ {3}", this.cliente, this.endereco, String.Join(" - ", this.itens), this.valor);
+    Console.WriteLine("------------");
+  }
+
 }
