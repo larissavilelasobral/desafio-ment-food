@@ -16,15 +16,11 @@
     Menu();
 
     string[] itens = new string[3];
-    itens[0] = Console.ReadLine() ?? string.Empty;
-    itens[1] = Console.ReadLine() ?? string.Empty;
-    itens[2] = Console.ReadLine() ?? string.Empty;
 
-    // Console.WriteLine("------------");
-    
-    // Pedido novoPedido = new Pedido(nome, endereco, itens);
-    // string nomePedido = novoPedido.Cardapio(itens);
-    // novoPedido.ResumoPedio(nomePedido);
+    for (var i = 0; i < 3; i++)
+    {
+      itens[i] = Console.ReadLine() ?? string.Empty;
+    }
 
     Pedido novoPedido = new Pedido(nome, endereco, itens);
     novoPedido.ResumoPedio();
