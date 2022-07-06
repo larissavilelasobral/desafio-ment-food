@@ -2,33 +2,31 @@
 {
   static void Main(string[] args)
   {
-    Console.WriteLine("Bem Vindo ao UaiFood!");
 
+    string cliente = "";
+    string endereco = "";
+    string[] itens = new string[3];
+
+    Pedido novoPedido = new Pedido(itens);
+
+    Console.WriteLine("Bem Vindo ao UaiFood!");
     Console.WriteLine("Digite seu nome: ");
-    string nome = Console.ReadLine() ?? string.Empty;
+    cliente = Console.ReadLine() ?? string.Empty;
     Console.WriteLine("------------");
 
     Console.WriteLine("Digite seu Enderço: ");
-    string endereco = Console.ReadLine() ?? string.Empty;
+    endereco = Console.ReadLine() ?? string.Empty;
     Console.WriteLine("------------");
 
     Console.WriteLine("O que gostaria de pedir? ");
-    Menu();
-
-    string[] itens = new string[3];
+    novoPedido.Menu();
 
     for (var i = 0; i < 3; i++)
     {
       itens[i] = Console.ReadLine() ?? string.Empty;
     }
 
-    Pedido novoPedido = new Pedido(nome, endereco, itens);
-    novoPedido.ResumoPedio();
-  }
-
-  static void Menu()
-  {
-    Console.WriteLine("Menu: \n 1. X-Tudo \n 2. Batata \n 3. Coca-Cola \n 4. Pepsi Cola");
+    novoPedido.ResumoPedio(cliente, endereco);
   }
 }
 

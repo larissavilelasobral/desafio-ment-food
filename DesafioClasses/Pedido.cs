@@ -5,10 +5,8 @@ class Pedido // nome da classe
   private string endereco;
   private string[] itens; // (máximo de 3).
 
-  public Pedido(string cliente, string endereco, string[] itens)
+  public Pedido(string[] itens)
   {
-    this.cliente = cliente;
-    this.endereco = endereco;
     this.itens = itens;
   }
 
@@ -36,6 +34,17 @@ class Pedido // nome da classe
     return nomeItem;
   }
 
+  public void Menu()
+  {
+    //lista de
+    //ListConsole.WriteLine("Menu: \n 1. X-Tudo \n 2. Batata \n 3. Coca-Cola \n 4. Pepsi Cola");
+    //List<string> menu = new List<string>();
+
+    string[] menu = { "1. X-Tudo", "2. Batata", "3. Coca-Cola", "4. Pepsi Cola" };
+
+    Console.WriteLine(String.Join("\n", menu));
+  }
+
   public double Cardapio(string numero)// metodo
   {
     double valorItem = 0;
@@ -57,7 +66,7 @@ class Pedido // nome da classe
       default:
         break;
     }
-    
+
     return valorItem;
   }
 
@@ -68,8 +77,10 @@ class Pedido // nome da classe
     Console.WriteLine("------------");
   }
 
-  public void ResumoPedio()
+  public void ResumoPedio(string cliente, string endereco)
   {
+    this.cliente = cliente;
+    this.endereco = endereco;
 
     List<string> nomes = new List<string>();
 
