@@ -1,20 +1,24 @@
-class Pedido // nome da classe
+class Pedido
 {
-  private double valor;
   private string cliente;
   private string endereco;
   private string[] itens; // (máximo de 3).
+  private double valor;
 
-  public Pedido(string[] itens)
+  public Pedido (string cliente, string endereco, string[] itens)
   {
+    this.cliente = cliente;
+    this.endereco = endereco;
     this.itens = itens;
   }
 
-  public string nomeItem(string numero)
+  public double Valor { get => valor; set => valor = value; }
+
+  public string RetornaNomeItem(string numeroItem)
   {
     string nomeItem = "";
 
-    switch (numero)
+    switch (numeroItem)
     {
       case "1":
         nomeItem = "X-Tudo";
@@ -34,22 +38,11 @@ class Pedido // nome da classe
     return nomeItem;
   }
 
-  public void Menu()
-  {
-    //lista de
-    //ListConsole.WriteLine("Menu: \n 1. X-Tudo \n 2. Batata \n 3. Coca-Cola \n 4. Pepsi Cola");
-    //List<string> menu = new List<string>();
-
-    string[] menu = { "1. X-Tudo", "2. Batata", "3. Coca-Cola", "4. Pepsi Cola" };
-
-    Console.WriteLine(String.Join("\n", menu));
-  }
-
-  public double Cardapio(string numero)// metodo
+  public double RetornaValorItem(string numeroItem)
   {
     double valorItem = 0;
 
-    switch (numero)
+    switch (numeroItem)
     {
       case "1":
         valorItem = 6.50;
@@ -68,36 +61,5 @@ class Pedido // nome da classe
     }
 
     return valorItem;
-  }
-
-  public void ResumoPedio(string nomePedido)
-  {
-    Console.WriteLine("------------");
-    Console.WriteLine("Resumo do Pedido: \n Cliente: {0} \n Endereço: {1} \n Itens: {2} \n Total: R$ {3}", this.cliente, this.endereco, nomePedido, this.valor);
-    Console.WriteLine("------------");
-  }
-
-  public void ResumoPedio(string cliente, string endereco)
-  {
-    this.cliente = cliente;
-    this.endereco = endereco;
-
-    List<string> nomes = new List<string>();
-
-    foreach (string item in this.itens)
-    {
-      string valor = nomeItem(item);
-      nomes.Add(valor);
-    }
-
-    double valores = 0;
-
-    foreach (string item in this.itens)
-    {
-      double valor = Cardapio(item);
-      valores += valor;
-    }
-
-    Console.WriteLine("Resumo do Pedido: \n Cliente: {0} \n Endereço: {1} \n Itens: {2} \n Total: R$ {3}", this.cliente, this.endereco, String.Join(" - ", nomes), valores);
   }
 }
