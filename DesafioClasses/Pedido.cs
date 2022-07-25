@@ -5,7 +5,7 @@ class Pedido
   private string[] itens; // (máximo de 3).
   private double valor;
 
-  public Pedido (string cliente, string endereco, string[] itens)
+  public Pedido(string cliente, string endereco, string[] itens)
   {
     this.cliente = cliente;
     this.endereco = endereco;
@@ -60,6 +60,40 @@ class Pedido
         break;
     }
 
+    return valorItem;
+  }
+
+  public double valorTotal(string[] numerosItem)
+  {
+    //recebe um array de numeros
+    // faz um loop no array
+    // em cada item faz uma ação
+    // passa o valor total para o pedido
+
+    double valorItem = 0;
+
+    foreach (string item in numerosItem)
+    {
+      switch (item)
+      {
+        case "1":
+          valorItem += 6.50;
+          break;
+        case "2":
+          valorItem += 4.00;
+          break;
+        case "3":
+          valorItem += 5.00;
+          break;
+        case "4":
+          valorItem += 3.50;
+          break;
+        default:
+          break;
+      }
+    }
+    
+    this.valor = valorItem;
     return valorItem;
   }
 }

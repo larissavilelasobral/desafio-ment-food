@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hVFtCXkVETpxMT1E+TyIW1gbuu3Pq6Qr+ju4DIvMcQ2nHO9wFIy4iewhxRYtWSSKoCMaAioC7X+T7PAhufKM7Q==",
+  "dgSpecHash": "hQe/wgByy1DmvMr48YQUE778GTwYVgEdFlQolcYCyJTKUCuOQcv2vWL9a+GTiUA1ieDalO7hnJq656ZjavQScw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\04.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "c:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\04.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\96086\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\96086\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\96086\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\04.csproj": {}
+    "c:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\04.csproj": {}
   },
   "projects": {
-    "C:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\04.csproj": {
+    "c:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\04.csproj",
+        "projectUniqueName": "c:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\04.csproj",
         "projectName": "04",
-        "projectPath": "C:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\04.csproj",
+        "projectPath": "c:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\04.csproj",
         "packagesPath": "C:\\Users\\96086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\obj\\",
+        "outputPath": "c:\\Users\\96086\\Desktop\\desafio-ment-food\\DesafioClasses\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\96086\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
